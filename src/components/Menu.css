@@ -1,0 +1,198 @@
+.menu-container {
+    background-color: #1a1a1a;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+  }
+  
+  /* Neon Title Styles */
+  .neon-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 5px #fff,
+                 0 0 10px #fff,
+                 0 0 20px #ff00de,
+                 0 0 30px #ff00de,
+                 0 0 40px #ff00de;
+    animation: neon-pulse 1.5s infinite alternate;
+  }
+  
+  .neon-subtitle {
+    color: #ff00de;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 1rem;
+    text-shadow: 0 0 5px #ff00de;
+  }
+  
+  /* Menu Card Styles */
+  .menu-card {
+    position: relative;
+    height: 400px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-inner {
+    position: relative;
+    height: 100%;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+  }
+  
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  }
+  
+  .neon-card-title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px #ff00de;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-card:hover .neon-card-title {
+    color: #ff00de;
+  }
+  
+  .neon-card-subtitle {
+    color: #ff00de;
+    font-style: italic;
+  }
+  
+  /* Modal Styles */
+  .menu-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+    padding: 1rem;
+  }
+  
+  .modal-content {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    border: 2px solid #ff00de;
+    box-shadow: 0 0 20px #ff00de;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #ff00de;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .carousel-container {
+    position: relative;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #ff00de;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .carousel-button.prev {
+    left: 1rem;
+  }
+  
+  .carousel-button.next {
+    right: 1rem;
+  }
+  
+  .modal-description {
+    padding: 2rem;
+  }
+  
+  .neon-modal-title {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px #ff00de;
+  }
+  
+  .modal-text {
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* Neon Pulse Animation */
+  @keyframes neon-pulse {
+    from {
+      text-shadow: 0 0 5px #fff,
+                   0 0 10px #fff,
+                   0 0 20px #ff00de,
+                   0 0 30px #ff00de,
+                   0 0 40px #ff00de;
+    }
+    to {
+      text-shadow: 0 0 5px #fff,
+                   0 0 10px #fff,
+                   0 0 15px #ff00de,
+                   0 0 25px #ff00de,
+                   0 0 35px #ff00de;
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .neon-title {
+      font-size: 2.5rem;
+    }
+    
+    .modal-content {
+      padding: 1rem;
+    }
+    
+    .modal-description {
+      padding: 1rem;
+    }
+  }
