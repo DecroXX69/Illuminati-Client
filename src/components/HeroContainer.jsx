@@ -16,15 +16,15 @@ const HeroContainer = () => {
       image: lounge1,
       title: 'Elevate Your Nights',
       description: 'Experience luxury dining at the city\'s finest sky lounge',
-      buttonText: 'Reserve Now',
-      buttonLink: '#reservation'
+      buttonText: 'Our Services',
+      buttonLink: '#services'
     },
     {
       image: lounge7,
       title: 'Celebrate in Style',
       description: 'Perfect venue for your grand celebrations',
-      buttonText: 'Plan Event',
-      buttonLink: '#events'
+      buttonText: 'Explore The Vibes',
+      buttonLink: '#gallery'
     },
     {
       image: lounge2,

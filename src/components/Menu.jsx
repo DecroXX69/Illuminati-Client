@@ -51,7 +51,7 @@ const MenuComponent = () => {
       {/* Main Title */}
       <div className="text-center mb-5">
         <h1 className="neon-title">OUR MENU</h1>
-        <p className="neon-subtitle">Flavours, Spirits and Mouthwatering Delicacies</p>
+        <p className="neon-subtitle">Flavours, Spirits and Mouthwatering Delicacies!!</p>
       </div>
 
       {/* Menu Categories */}

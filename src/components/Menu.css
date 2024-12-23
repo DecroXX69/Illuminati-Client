@@ -1,5 +1,6 @@
 .menu-container {
-    background-color: #1a1a1a;
+  background-color: #000;
+  background-image: radial-gradient(circle at 20% 20%, rgba(41, 98, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(255, 41, 113, 0.1) 0%, transparent 50%);
     min-height: 100vh;
     padding: 4rem 2rem;
   }

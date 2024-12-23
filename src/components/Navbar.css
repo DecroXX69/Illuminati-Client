@@ -90,6 +90,35 @@
   margin-left: 2.5rem;
 }
 
+.nav-link.active {
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff, 0 0 15px #ff00ff;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Modify the existing nav-section class */
+.nav-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+
+/* Update existing classes */
+.left-section {
+  justify-content: flex-start;
+  flex: 0 0 auto;
+}
+
+.right-section {
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-left: auto;
+}
 @media (max-width: 991.98px) {
   .nav-container {
     padding: 0 1rem;
