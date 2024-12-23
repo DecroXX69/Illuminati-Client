@@ -1,5 +1,4 @@
-// MenuComponent.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import './Menu.css';
 import dhuur from '../assets/dhuur.jpg';
@@ -10,6 +9,8 @@ import menu2 from '../assets/menu2.png';
 import menu3 from '../assets/menu3.png';
 import menu4 from '../assets/menu4.png';
 import menu5 from '../assets/sesamenu.png';
+
+
 const MenuComponent = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -18,33 +19,37 @@ const MenuComponent = () => {
     {
       title: 'FOOD',
       description: 'Our Delicacies',
-      images: [menu1, menu2],
+      cardImage: food, // Main card image
+      images: [menu1, menu2], // Menu images for modal
       longDescription: 'Experience the finest flavors crafted by our expert chefs. Using only the freshest local ingredients, our dishes blend traditional recipes with modern culinary innovation. Every plate is a masterpiece, designed to take your taste buds on an unforgettable journey.',
     },
     {
       title: 'BAR',
       description: 'Lifting your Spirits',
-      images: [menu3, menu4],
+      cardImage: juice, // Main card image
+      images: [menu3, menu4], // Menu images for modal
       longDescription: 'Discover our expertly crafted cocktails and premium spirits. Our mixologists blend classic techniques with contemporary flair to create drinks that are both visually stunning and deliciously memorable. Each sip is an adventure in flavor.',
     },
     {
       title: 'SHEESHA',
       description: 'Explore Menu',
-      images: [menu5],
+      cardImage: dhuur, // Main card image
+      images: [menu5], // Menu images for modal
       longDescription: 'Indulge in our premium sheesha selection, featuring exotic flavors and perfect blends. Our expert staff ensures each session is perfectly packed and maintained, providing you with the smoothest experience possible.',
     },
   ];
 
-  useEffect(() => {
-    if (selectedCategory !== null) {
-      const timer = setInterval(() => {
-        setCurrentSlide((prev) => 
-          prev === menuCategories[selectedCategory].images.length - 1 ? 0 : prev + 1
-        );
-      }, 3000);
-      return () => clearInterval(timer);
-    }
-  }, [selectedCategory]);
+  const handleNextSlide = () => {
+    setCurrentSlide(prev => 
+      prev === menuCategories[selectedCategory].images.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const handlePrevSlide = () => {
+    setCurrentSlide(prev => 
+      prev === 0 ? menuCategories[selectedCategory].images.length - 1 : prev - 1
+    );
+  };
 
   return (
     <div className="menu-container">
@@ -61,11 +66,14 @@ const MenuComponent = () => {
             <div className="col-md-4 mb-4" key={category.title}>
               <div 
                 className="menu-card"
-                onClick={() => setSelectedCategory(index)}
+                onClick={() => {
+                  setSelectedCategory(index);
+                  setCurrentSlide(0); // Reset slide index when opening modal
+                }}
               >
                 <div className="card-inner">
                   <img
-                    src={dhuur}
+                    src={category.cardImage}
                     alt={category.title}
                     className="card-img"
                   />
@@ -86,7 +94,10 @@ const MenuComponent = () => {
           <div className="modal-content">
             <button
               className="close-button"
-              onClick={() => setSelectedCategory(null)}
+              onClick={() => {
+                setSelectedCategory(null);
+                setCurrentSlide(0); // Reset slide index when closing
+              }}
             >
               <X size={24} />
             </button>
@@ -99,33 +110,36 @@ const MenuComponent = () => {
                     alt="Menu"
                     className="carousel-image"
                   />
-                  <button
-                    className="carousel-button prev"
-                    onClick={() => setCurrentSlide(prev => 
-                      prev === 0 ? menuCategories[selectedCategory].images.length - 1 : prev - 1
-                    )}
-                  >
-                    <ChevronLeft size={32} />
-                  </button>
-                  <button
-                    className="carousel-button next"
-                    onClick={() => setCurrentSlide(prev => 
-                      prev === menuCategories[selectedCategory].images.length - 1 ? 0 : prev + 1
-                    )}
-                  >
-                    <ChevronRight size={32} />
-                  </button>
+                  {menuCategories[selectedCategory].images.length > 1 && (
+                    <>
+                      <button
+                        className="carousel-button prev"
+                        onClick={handlePrevSlide}
+                      >
+                        <ChevronLeft size={32} />
+                      </button>
+                      <button
+                        className="carousel-button next"
+                        onClick={handleNextSlide}
+                      >
+                        <ChevronRight size={32} />
+                      </button>
+                    </>
+                  )}
                 </div>
               </div>
 
               <div className="col-md-6">
                 <div className="modal-description">
-                  <h2 className="neon-modal-title">
-                    {menuCategories[selectedCategory].title}
-                  </h2>
-                  <p className="modal-text">
-                    {menuCategories[selectedCategory].longDescription}
-                  </p>
+                  <div className="modal-content-inner">
+                    <h2 className="neon-modal-title">
+                      {menuCategories[selectedCategory].title}
+                    </h2>
+                    <hr className="neon-divider" />
+                    <p className="modal-text">
+                      {menuCategories[selectedCategory].longDescription}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

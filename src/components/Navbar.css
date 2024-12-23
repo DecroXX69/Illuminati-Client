@@ -60,6 +60,7 @@
   position: relative;
   padding: 0.5rem 1.5rem;
   transition: color 0.3s ease, text-shadow 0.3s ease;
+  cursor: pointer; /* Add pointer cursor */
 }
 
 .nav-link:hover {
@@ -106,8 +107,6 @@
   gap: 2rem;
 }
 
-
-
 /* Update existing classes */
 .left-section {
   justify-content: flex-start;
@@ -119,6 +118,7 @@
   gap: 2rem;
   margin-left: auto;
 }
+
 @media (max-width: 991.98px) {
   .nav-container {
     padding: 0 1rem;

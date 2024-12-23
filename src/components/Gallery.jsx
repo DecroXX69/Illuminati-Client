@@ -86,13 +86,13 @@ const Gallery = () => {
           <h2 className="neon-title">Gallery</h2>
           <p className="subtitle">We have the best quests</p>
           
-          {/* Category Filter */}
+          {/* Category Filter
           <div className="category-filter">
             <button className="filter-btn active">All</button>
             <button className="filter-btn">Events</button>
             <button className="filter-btn">Lounge</button>
             <button className="filter-btn">Dining</button>
-          </div>
+          </div> */}
         </div>
 
         <div className="masonry-gallery">

@@ -41,6 +41,40 @@
     border-radius: 5px;
     overflow: hidden;
   }
+
+/* Add these styles to your MapStyles.css */
+.leaflet-container {
+  background: #1a1a1a !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(17, 25, 40, 0.9) !important;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  color: #fff !important;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.leaflet-popup-tip {
+  background: rgba(17, 25, 40, 0.9) !important;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.neon-popup .leaflet-popup-content {
+  margin: 12px 16px;
+}
+
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  }
+}
   
   /* Responsive Design */
   
