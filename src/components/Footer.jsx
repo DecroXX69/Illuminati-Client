@@ -22,10 +22,8 @@ const Footer = () => {
             <a href="https://www.instagram.com/illuminati_lounge/" target="_blank" rel="noopener noreferrer" className="social-icon">
               <Instagram className="icon" />
             </a>
-            <a href="#" className="social-icon">
-              <Twitter className="icon" />
-            </a>
-            <a href="#" className="social-icon">
+            
+            <a href="https://www.facebook.com/share/1DB1D2S2HP/?mibextid=wwXIfr" className="social-icon">
               <Facebook className="icon" />
             </a>
             <a href="#" className="social-icon">
