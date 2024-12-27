@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../assets/logo.png';
+import secondLogo from '../assets/logo3.png'; // You'll need to import your second logo
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -46,49 +47,58 @@ const Navbar = () => {
   return (
     <nav className={`navbar navbar-expand-lg fixed-top ${scrolled ? 'scrolled' : ''}`}>
       <div className="container-fluid nav-container">
-        {/* Logo Section (Left) */}
+        {/* Left Logo Section */}
         <div className="nav-section left-section">
           <Link className="navbar-brand" to="/">
-            <img src={logo} alt="Night Club 128" className="logo" />
+            <img src={logo} alt="Night Club 128" className="logo main-logo" />
           </Link>
         </div>
 
-        {/* Navigation Links (Right) */}
-        <div className="nav-section right-section" style={{ justifyContent: 'flex-end', marginLeft: 'auto' }}>
-          <a
-            className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
-            onClick={() => scrollToSection('about')}
-          >
-            About
-          </a>
-          <a
-            className={`nav-link ${activeSection === 'services' ? 'active' : ''}`}
-            onClick={() => scrollToSection('services')}
-          >
-            Services
-          </a>
-          <a
-            className={`nav-link ${activeSection === 'menu' ? 'active' : ''}`}
-            onClick={() => scrollToSection('menu')}
-          >
-            Menu
-          </a>
-          <a
-            className={`nav-link ${activeSection === 'gallery' ? 'active' : ''}`}
-            onClick={() => scrollToSection('gallery')}
-          >
-            Gallery
-          </a>
-          <a
-            className={`nav-link ${activeSection === 'maps' ? 'active' : ''}`}
-            onClick={() => scrollToSection('maps')}
-          >
-            Locations
-          </a>
+        {/* Center Navigation Section */}
+        <div className="nav-section center-section">
+          <div className="nav-links">
+            <a
+              className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
+              onClick={() => scrollToSection('about')}
+            >
+              About
+            </a>
+            <a
+              className={`nav-link ${activeSection === 'services' ? 'active' : ''}`}
+              onClick={() => scrollToSection('services')}
+            >
+              Services
+            </a>
+            <a
+              className={`nav-link ${activeSection === 'menu' ? 'active' : ''}`}
+              onClick={() => scrollToSection('menu')}
+            >
+              Menu
+            </a>
+            <a
+              className={`nav-link ${activeSection === 'gallery' ? 'active' : ''}`}
+              onClick={() => scrollToSection('gallery')}
+            >
+              Gallery
+            </a>
+            <a
+              className={`nav-link ${activeSection === 'maps' ? 'active' : ''}`}
+              onClick={() => scrollToSection('maps')}
+            >
+              Locations
+            </a>
+          </div>
+        </div>
+
+        {/* Right Logo Section */}
+        <div className="nav-section right-section">
+          <Link className="navbar-brand" to="/">
+            <img src={secondLogo} alt="Second Logo" className="logo second-logo" />
+          </Link>
         </div>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default Navbar; 

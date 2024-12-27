@@ -9,8 +9,11 @@ import menu2 from '../assets/menu2.png';
 import menu3 from '../assets/menu3.png';
 import menu4 from '../assets/menu4.png';
 import menu5 from '../assets/sesamenu.png';
+import menu7 from '../assets/menu7.png';
+import menu9 from '../assets/menu9.png';
+import menu10 from '../assets/menu10.png';
 
-
+import menu11 from '../assets/menu11.png';
 const MenuComponent = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -20,15 +23,15 @@ const MenuComponent = () => {
       title: 'FOOD',
       description: 'Our Delicacies',
       cardImage: food, // Main card image
-      images: [menu1, menu2], // Menu images for modal
+      images: [menu1, menu2, menu3, menu4, menu7, menu9,menu10], // Menu images for modal
       longDescription: 'Experience the finest flavors crafted by our expert chefs. Using only the freshest local ingredients, our dishes blend traditional recipes with modern culinary innovation. Every plate is a masterpiece, designed to take your taste buds on an unforgettable journey.',
     },
     {
-      title: 'BAR',
+      title: 'DRINKS',
       description: 'Lifting your Spirits',
       cardImage: juice, // Main card image
-      images: [menu3, menu4], // Menu images for modal
-      longDescription: 'Discover our expertly crafted cocktails and premium spirits. Our mixologists blend classic techniques with contemporary flair to create drinks that are both visually stunning and deliciously memorable. Each sip is an adventure in flavor.',
+      images: [menu11], // Menu images for modal
+      longDescription: 'Discover our expertly crafted mocktails and premium refreshers. Our mixologists blend classic techniques with contemporary flair to create drinks that are both visually stunning and deliciously memorable. Each sip is an adventure in flavor.',
     },
     {
       title: 'SHEESHA',

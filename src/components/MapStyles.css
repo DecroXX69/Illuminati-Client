@@ -42,6 +42,10 @@
     overflow: hidden;
   }
 
+  /* Add this to your MapStyles.css or a new CSS file */
+.neon-title {
+  font-size: 3rem; 
+}
 /* Add these styles to your MapStyles.css */
 .leaflet-container {
   background: #1a1a1a !important;

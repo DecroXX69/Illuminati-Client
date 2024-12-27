@@ -222,6 +222,93 @@
   }
 }
 
+/* Add these new styles while keeping your existing Services.css styles */
+
+.service-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.toggle-btn:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #ff2971, #2962ff);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.toggle-btn:hover:before,
+.toggle-btn.active:before {
+  opacity: 1;
+}
+
+.toggle-btn:hover,
+.toggle-btn.active {
+  border-color: transparent;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 0 20px rgba(41, 98, 255, 0.3),
+    0 0 40px rgba(255, 41, 113, 0.3);
+  transform: translateY(-2px);
+}
+
+.toggle-btn:focus {
+  outline: none;
+}
+
+/* Ensure proper spacing for service cards */
+.service-container {
+  margin-top: 2rem;
+}
+
+/* Adjust card transitions */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .toggle-btn {
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+  }
+
+  .service-toggle {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .service-container {
+    margin-top: 1rem;
+  }
+}
 /* Responsive Adjustments */
 @media (max-width: 991.98px) {
   .service-section {

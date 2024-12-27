@@ -43,6 +43,8 @@ const LeafletMap = () => {
 
   return (
     <div className="location-container neon-theme">
+      {/* Neon Themed Heading */}
+      {/* <h1 className="neon-title">OUR LOCATIONS</h1> */}
       <div className="location-details">
         <h2>ADDRESS:</h2>
         <h3>Kolkata</h3>
