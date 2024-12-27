@@ -13,6 +13,9 @@ import cafevid20 from "../assets/cafevid20.MOV";
 import cafevid21 from "../assets/cafevid21.MOV";
 import cafevid22 from "../assets/cafevid22.MOV";
 import cafevid23 from "../assets/cafevid23.MOV";
+import hero8 from '../assets/hero8.MOV';
+import hero9 from '../assets/hero9.MOV';
+import hero10 from '../assets/hero10.MOV';
 import cafe1 from '../assets/cafe1.jpg';
 import cafe2 from '../assets/cafe2.jpg';
 import cafe3 from '../assets/cafe3.jpg';
@@ -250,6 +253,31 @@ const Gallery = () => {
       id: 25,
       height: '300px',
       src: cafevid23,
+      category: 'experiences',
+      title: 'Fine Dining',
+      type: 'video'
+    },
+    {
+      id: 26,
+      height: '300px',
+      src: hero8,
+      category: 'experiences',
+      title: 'Fine Dining',
+      type: 'video'
+    },
+    {
+      id: 27,
+      height: '300px',
+      src: hero9,
+      category: 'experiences',
+      title: 'Fine Dining',
+      type: 'video'
+    },
+    {
+
+      id: 28,
+      height: '300px',
+      src: hero10,
       category: 'experiences',
       title: 'Fine Dining',
       type: 'video'
