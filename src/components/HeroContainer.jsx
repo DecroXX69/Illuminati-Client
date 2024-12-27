@@ -40,14 +40,8 @@ const HeroContainer = () => {
       description: 'Your premium rooftop destination',
       buttonText: 'Explore',
       buttonLink: '#about'
-    },
-    {
-      image: hero8,
-      title: 'Elevate Your Nights',
-      description: 'Experience luxury dining at the city\'s finest sky lounge',
-      buttonText: 'Our Services',
-      buttonLink: '#services'
     }
+    
   ];
 
   const handleNavigation = (direction) => {
