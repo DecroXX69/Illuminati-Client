@@ -26,7 +26,7 @@ const Footer = () => {
             <a href="https://www.facebook.com/share/1DB1D2S2HP/?mibextid=wwXIfr" className="social-icon">
               <Facebook className="icon" />
             </a>
-            <a href="#" className="social-icon">
+            <a href="https://www.youtube.com/@illuminaticafeskylounge" className="social-icon">
               <Youtube className="icon" />
             </a>
           </div>
