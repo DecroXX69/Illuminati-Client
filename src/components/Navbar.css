@@ -228,3 +228,26 @@
     height: 50px;
   }
 }
+
+/* Responsive font sizes for navbar titles */
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 0.9rem; /* Smaller font size for mobile screens */
+    padding: 0.4rem 0.8rem; /* Adjust padding to maintain proper spacing */
+  }
+
+  .nav-links {
+    gap: 1rem; /* Reduce spacing between links */
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-link {
+    font-size: 0.8rem; /* Further reduce font size for very small screens */
+    padding: 0.3rem 0.6rem; /* Adjust padding further */
+  }
+
+  .nav-links {
+    gap: 0.8rem; /* Even tighter spacing for links */
+  }
+}

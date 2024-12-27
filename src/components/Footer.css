@@ -21,7 +21,7 @@
 }
 
 .logo {
-  margin-bottom: 2rem;
+  margin-bottom: 5.5rem;
 }
 
 .logo-svg {
@@ -89,6 +89,9 @@
   color: #f7c65e;
 }
 
+.logo-image{
+  width: 80px;
+}
 /* Media Queries */
 
 /* Mobile Devices (Screens < 768px) */

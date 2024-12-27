@@ -1,4 +1,3 @@
-// HeroContainer.jsx
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Wine } from 'lucide-react';
 import './HeroContainer.css';
@@ -6,6 +5,9 @@ import lounge1 from '../assets/lounge1.jpg';
 import lounge2 from '../assets/lounge2.jpg';
 import lounge7 from '../assets/lounge7.jpg';
 import lounge5 from '../assets/lounge5.jpg';
+import hero8 from '../assets/hero8.MOV';
+import hero9 from '../assets/hero9.MOV';
+import hero10 from '../assets/hero10.MOV';
 
 const HeroContainer = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,32 +15,61 @@ const HeroContainer = () => {
   
   const heroContent = [
     {
-      image: lounge1,
+      type: 'image',
+      source: lounge1,
       title: 'Elevate Your Nights',
       description: 'Experience luxury dining at the city\'s finest sky lounge',
       buttonText: 'Our Services',
       buttonLink: '#services'
     },
     {
-      image: lounge7,
+      type: 'image',
+      source: lounge7,
       title: 'Celebrate in Style',
       description: 'Perfect venue for your grand celebrations',
       buttonText: 'Explore The Vibes',
       buttonLink: '#gallery'
     },
     {
-      image: lounge2,
+      type: 'image',
+      source: lounge2,
       title: 'Culinary Excellence',
       description: 'Savor the finest cuisines with a panoramic view',
       buttonText: 'View Menu',
       buttonLink: '#menu'
     },
     {
-      image: lounge5,
+      type: 'image',
+      source: lounge5,
       title: 'Urban Oasis',
       description: 'Your premium rooftop destination',
       buttonText: 'Explore',
       buttonLink: '#about'
+    },
+    {
+      type: 'video',
+      source: hero8,
+      title: 'Elevate Your Nights',
+      description: 'Experience luxury dining at the city\'s finest sky lounge',
+      buttonText: 'Our Services',
+      buttonLink: '#services'
+    },
+    {
+
+      type: 'video',
+      source: hero9,
+      title: 'Celebrate in Style',
+      description: 'Perfect venue for your grand celebrations',
+      buttonText: 'Explore The Vibes',
+      buttonLink: '#gallery'
+    },
+    {
+      type: 'video',
+      source: hero10,
+      title: 'Culinary Excellence',
+      description: 'Savor the finest cuisines with a panoramic view',
+      buttonText: 'View Menu',
+      buttonLink: '#menu'
     }
   ];
 
@@ -89,6 +120,28 @@ const HeroContainer = () => {
     );
   };
 
+  const MediaContent = ({ content, isActive }) => {
+    if (content.type === 'video') {
+      return (
+        <video
+          src={content.source}
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+      );
+    }
+    return (
+      <img
+        src={content.source}
+        alt={content.title}
+        className="hero-image"
+      />
+    );
+  };
+
   return (
     <div className="hero-container">
       {heroContent.map((content, index) => (
@@ -97,10 +150,9 @@ const HeroContainer = () => {
           className={`hero-slide ${index === currentIndex ? 'active' : ''}`}
         >
           <div className="hero-image-wrapper">
-            <img
-              src={content.image}
-              alt={content.title}
-              className="hero-image"
+            <MediaContent 
+              content={content} 
+              isActive={index === currentIndex} 
             />
             <div className="hero-overlay"></div>
           </div>

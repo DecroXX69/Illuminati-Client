@@ -9,6 +9,10 @@ import lounge4 from '../assets/lounge4.jpg';
 import lounge3 from '../assets/lounge3.jpg';
 import cafevid1 from "../assets/cafevid14.mp4";
 import cafevid2 from "../assets/Cafevid.mp4";
+import cafevid20 from "../assets/cafevid20.MOV";
+import cafevid21 from "../assets/cafevid21.MOV";
+import cafevid22 from "../assets/cafevid22.MOV";
+import cafevid23 from "../assets/cafevid23.MOV";
 import cafe1 from '../assets/cafe1.jpg';
 import cafe2 from '../assets/cafe2.jpg';
 import cafe3 from '../assets/cafe3.jpg';
@@ -18,7 +22,10 @@ import cafe6 from '../assets/cafe6.jpg';
 import cafe7 from '../assets/cafe7.jpg';
 import cafe8 from '../assets/cafe8.jpg';
 import cafe9 from '../assets/cafe9.jpg';
-
+import cafe15 from '../assets/cafe15.JPG';
+import cafe16 from '../assets/cafe16.JPG';
+import cafe17 from '../assets/cafe17.jpg';
+import cafe18 from '../assets/cafe18.jpg';
 
 
 const Gallery = () => {
@@ -177,7 +184,77 @@ const Gallery = () => {
       category: 'experiences',
       title: 'Fine Dining',
       type: 'video'
+    },
+
+    {
+      id: 18,
+      height: '300px',
+      src: cafe15,
+      category: 'dining',
+      title: 'Fine Dining',
+      type: 'image'
+    },
+
+    {
+      id: 19,
+      height: '300px',
+      src: cafe16,
+      category: 'dining',
+      title: 'Fine Dining',
+      type: 'image'
+    },
+
+    {
+      id: 20,
+      height: '300px',
+      src: cafe17,
+      category: 'dining',
+      title: 'Fine Dining',
+      type: 'image'
+    },
+
+    {
+      id: 21,
+      height: '300px',
+      src: cafe18,
+      category: 'dining',
+      title: 'Fine Dining',
+      type: 'image'
+    },
+
+    {
+      id: 22,
+      height: '300px',
+      src: cafevid20,
+      category: 'experiences',
+      title: 'Fine Dining',
+      type: 'video'
+    },
+    {
+      id: 23,
+      height: '300px', 
+      src: cafevid21,
+      category: 'experiences',
+      title: 'Fine Dining',
+      type: 'video'
+    },
+    {
+      id: 24,
+      height: '300px',
+      src: cafevid22,
+      category: 'experiences',
+      title: 'Fine Dining',
+      type: 'video'
+    },
+    {
+      id: 25,
+      height: '300px',
+      src: cafevid23,
+      category: 'experiences',
+      title: 'Fine Dining',
+      type: 'video'
     }
+   
 
 
     
@@ -315,6 +392,7 @@ const Gallery = () => {
               className="nav-button prev"
               onClick={prevPage}
               disabled={currentPage === 0}
+              style={{ position:"absolute", left:"1%"    }}
             >
               <ChevronLeft size={24} />
             </button>
@@ -322,6 +400,7 @@ const Gallery = () => {
               className="nav-button next"
               onClick={nextPage}
               disabled={currentPage === totalPages - 1}
+              style={{ position:"absolute", left:"94%"    }}
             >
               <ChevronRight size={24} />
             </button>

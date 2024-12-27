@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import './Menu.css';
-import dhuur from '../assets/dhuur.jpg';
+import dhuur from '../assets/sheesha.jpg';
 import food from '../assets/food.jpg';
 import juice from '../assets/juice.jpg';
 import menu1 from '../assets/menu1.png';
