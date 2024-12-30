@@ -7,15 +7,12 @@ import secondLogo from '../assets/logo3.png'; // You'll need to import your seco
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('about');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      if (offset > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(offset > 50);
 
       // Determine which section is currently in view
       const sections = ['about', 'services', 'menu', 'gallery', 'maps'];
@@ -44,6 +41,10 @@ const Navbar = () => {
     }
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className={`navbar navbar-expand-lg fixed-top ${scrolled ? 'scrolled' : ''}`}>
       <div className="container-fluid nav-container">
@@ -54,8 +55,15 @@ const Navbar = () => {
           </Link>
         </div>
 
+        {/* Hamburger Menu */}
+        <div className="hamburger-menu" onClick={toggleMenu}>
+          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
+          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
+          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
+        </div>
+
         {/* Center Navigation Section */}
-        <div className="nav-section center-section">
+        <div className={`nav-section center-section ${isMenuOpen ? 'active' : ''}`}>
           <div className="nav-links">
             <a
               className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
@@ -101,4 +109,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

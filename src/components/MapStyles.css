@@ -1,51 +1,49 @@
 .location-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 80px;
-    background-color: black;
-    color: antiquewhite;
-  }
-  
-  .location-details {
-    flex: 1;
-    font-family: Arial, sans-serif;
-  }
-  
-  .location-details h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .location-details h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  .location-details p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-  }
-  
-  .location-details a {
-    color: inherit; /* Inherit color from the parent element */
-    text-decoration: none; /* Optional: removes underline from links */
-  }
-  
-  .map-container {
-    flex: 2;
-    height: 400px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-
-  /* Add this to your MapStyles.css or a new CSS file */
-.neon-title {
-  font-size: 3rem; 
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 80px;
+  background-color: black;
+  color: antiquewhite;
+  flex-wrap: wrap; /* Ensure content wraps on smaller screens */
 }
+
+.location-details {
+  flex: 1;
+  font-family: Arial, sans-serif;
+}
+
+.location-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.location-details h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.location-details p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.location-details a {
+  color: inherit; /* Inherit color from the parent element */
+  text-decoration: none; /* Optional: removes underline from links */
+}
+
+.map-container {
+  flex: 2;
+  height: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  min-width: 300px; /* Prevent collapse on smaller screens */
+}
+
 /* Add these styles to your MapStyles.css */
 .leaflet-container {
   background: #1a1a1a !important;
@@ -79,47 +77,46 @@
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
   }
 }
-  
-  /* Responsive Design */
-  
-  /* For screens less than 768px (Mobile devices) */
-  @media screen and (max-width: 768px) {
-    .location-container {
-      flex-direction: column; /* Stack the content vertically */
-      padding: 20px;
-    }
-  
-    .location-details {
-      text-align: center; /* Center-align text */
-    }
-  
-    .map-container {
-      width: 100%; /* Take full width */
-      height: 300px; /* Reduce map height */
-      padding: 10px;
-    }
+
+/* Responsive Design */
+
+/* For screens less than 768px (Mobile devices) */
+@media screen and (max-width: 768px) {
+  .location-container {
+    flex-direction: column; /* Stack the content vertically */
+    padding: 20px;
   }
-  
-  /* For screens between 768px and 1024px (Tablets) */
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .location-container {
-      flex-direction: column; /* Stack the content vertically */
-      padding: 40px;
-    }
-  
-    .map-container {
-      height: 350px; /* Adjust map height for tablets */
-    }
+
+  .location-details {
+    text-align: center; /* Center-align text */
   }
-  
-  /* For large screens (Desktops) */
-  @media screen and (min-width: 1025px) {
-    .location-container {
-      padding: 80px;
-    }
-  
-    .map-container {
-      height: 400px;
-    }
+
+  .map-container {
+    width: 100%; /* Take full width */
+    height: 300px; /* Reduce map height */
+    min-width: unset; /* Remove minimum width for mobile */
   }
-  
+}
+
+/* For screens between 768px and 1024px (Tablets) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .location-container {
+    flex-direction: column; /* Stack the content vertically */
+    padding: 40px;
+  }
+
+  .map-container {
+    height: 350px; /* Adjust map height for tablets */
+  }
+}
+
+/* For large screens (Desktops) */
+@media screen and (min-width: 1025px) {
+  .location-container {
+    padding: 80px;
+  }
+
+  .map-container {
+    height: 400px;
+  }
+}
