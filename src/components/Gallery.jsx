@@ -29,6 +29,11 @@ import cafe15 from '../assets/cafe15.JPG';
 import cafe16 from '../assets/cafe16.JPG';
 import cafe17 from '../assets/cafe17.jpg';
 import cafe18 from '../assets/cafe18.jpg';
+import caf1 from '../assets/caf1.jpg';
+import caf2 from '../assets/caf2.jpg';
+import caf3 from '../assets/caf3.jpg';
+import caf4 from '../assets/caf4.jpg';
+import caf5 from '../assets/caf5.jpg';
 
 
 const Gallery = () => {
@@ -281,8 +286,52 @@ const Gallery = () => {
       category: 'experiences',
       title: 'Fine Dining',
       type: 'video'
-    }
+    },
+    {
+      id: 29,
+      height: '300px',
+      src: caf1,
+      category: 'lounge',
+      title: 'Birthday Celebrations',
+      type: 'image'
+    },
+
+    {
+      id: 30,
+      height: '300px',
+      src: caf2,
+      category: 'lounge',
+      title: 'Birthday Celebrations',
+      type: 'image'
+    },
+
+    {
+
+      id: 31,
+      height: '300px',
+      src: caf3,
+      category: 'lounge',
+      title: 'Birthday Celebrations',
+      type: 'image'
+    },
    
+    {
+      id: 32,
+      height: '300px',
+      src: caf4,
+      category: 'lounge',
+      title: 'Birthday Celebrations',
+      type: 'image'
+    },
+
+    { 
+      id: 33,
+      height: '300px',
+      src: caf5,
+      category: 'lounge',
+      title: 'Birthday Celebrations',
+      type: 'image'
+    }
 
 
     
